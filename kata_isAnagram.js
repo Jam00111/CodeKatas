@@ -5,10 +5,10 @@
 
 var isAnagram = function(test, original) {
 
-  if(test.length !== original.length){
+  if (test.length !== original.length) {
     return false;
   }
-  if(test === original){
+  if (test === original) {
     return true;
   }
 
@@ -17,7 +17,7 @@ var isAnagram = function(test, original) {
 
   let testCountKeys = Object.keys(testCount);
 
-  if(testCountKeys.length !== Object.keys(origCount).length){
+  if (testCountKeys.length !== Object.keys(origCount).length) {
     return false;
   }
 
@@ -27,8 +27,8 @@ var isAnagram = function(test, original) {
 
 }
 
-function countLetters(word){
-  return [... word.toLowerCase().split('')].reduce((counts, letter) => {
+function countLetters(word) {
+  return [...word.toLowerCase().split('')].reduce((counts, letter) => {
     counts[letter] = counts[letter] || 0;
     counts[letter]++;
     return counts;

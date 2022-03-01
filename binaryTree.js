@@ -26,21 +26,21 @@ Definition for a binary tree node.
  * @param {TreeNode} root
  * @return {boolean}
  */
- var isValidBST = function(root) {
+var isValidBST = function(root) {
 
 
-    return validate(root, null, null);
+  return validate(root, null, null);
 };
 
-var validate = function(node, left, right){
+var validate = function(node, left, right) {
 
-    if(node === null || node === undefined){
-       return true;
-    }
+  if (node === null || node === undefined) {
+    return true;
+  }
 
-     if((left !== null && node.val <= left) || (right !==null && node.val >= right)){
-         return false
-     }
+  if ((left !== null && node.val <= left) || (right !== null && node.val >= right)) {
+    return false
+  }
 
-     return validate(node.right, node.val, right) && validate(node.left, left, node.val);
+  return validate(node.right, node.val, right) && validate(node.left, left, node.val);
 };
